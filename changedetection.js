@@ -24,7 +24,7 @@ var landsatCollection = ee.ImageCollection('LANDSAT/LC08/C01/T1')
 var landsatCollection1 = ee.ImageCollection('LANDSAT/LC08/C01/T1')
     .filterDate('2014-11-01', '2014-11-30')
     .filterBounds(geometry);
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Make a cloud-free composite.
 var composite = ee.Algorithms.Landsat.simpleComposite({
   collection: landsatCollection,
