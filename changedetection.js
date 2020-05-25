@@ -10,7 +10,7 @@ var geometry = ee.FeatureCollection("users/wagle1996/Shapefile_location"),
 // construction code for the points.  Hover on the 'urban' variable
 // and click, 'Convert' in the dialog.
 // year of start and end
-var preYear=2014
+var preYear=2012
 var postYear=2017
 
 //var maxPoints = 200; // Maximum points per strata (suggest 200)
@@ -161,9 +161,9 @@ print(counts);
 
 //Export.table.toDrive(stratified,exportName);
 
-////////////////////////////////////////////////////////////////////////////////
+
 // VISUALIZATION
-////////////////////////////////////////////////////////////////////////////////
+
 // Visualize full assemblage
 var classStructFull = 
 { 'Other': {number: 0, color: '6f6f6f'},
