@@ -61,8 +61,8 @@ var clusterer = ee.Clusterer.wekaKMeans(100).train(training);
 
 // Cluster the input using the trained clusterer.
 var result = image.cluster(clusterer);
-//print (result);
-//print (clusterer);
+print (result);
+print (clusterer);
 
 // Display the clusters with random colors.
 //Map.addLayer(result.randomVisualizer().clip(geometry), {}, 'clusters');
