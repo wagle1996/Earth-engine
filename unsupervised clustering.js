@@ -65,7 +65,7 @@ print (result);
 print (clusterer);
 
 // Display the clusters with random colors.
-//Map.addLayer(result.randomVisualizer().clip(geometry), {}, 'clusters');
+Map.addLayer(result.randomVisualizer().clip(geometry), {}, 'clusters');
 // Reduce the region. The region parameter is the Feature geometry.
 //var meanDictionary = result.reduceRegion({
   //reducer: ee.Reducer.mean(),
