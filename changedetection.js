@@ -231,13 +231,13 @@ function getYearlyImage(collection,year) {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-// Function to get a list of column values from a structure
-function getList(struct,column){
-  return Object.keys(struct).map(function(k){
-    var value = struct[k][column];
-    return value;
-  });
-}
+// // Function to get a list of column values from a structure
+// function getList(struct,column){
+//   return Object.keys(struct).map(function(k){
+//     var value = struct[k][column];
+//     return value;
+//   });
+// }
 
 ///////////////////////////////////////////////////////////////////////////////
 // Function to get a list of ids (keys) from a structure
