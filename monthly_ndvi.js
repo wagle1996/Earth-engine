@@ -22,29 +22,8 @@ Map.addLayer(series.sum().clip(Da),
 // Get the timestamp from the most recent image in the reference collection.
 var time0 = reference.first().get('system:time_start');
 
-// Use imageCollection.iterate() to make a collection of cumulative anomaly over time.
-// The initial value for iterate() is a list of anomaly images already processed.
-// The first anomaly image in the list is just 0, with the time0 timestamp.
-var first = ee.List([
-  // Rename the first band 'NDVI'.
-  ee.Image(0).set('system:time_start', time0).select([0], ['NDVI'])
-]);
 
-// This is a function to pass to Iterate().
-// As anomaly images are computed, add them to the list.
-// var accumulate = function(image, list) {
-//   // Get the latest cumulative anomaly image from the end of the list with
-//   // get(-1).  Since the type of the list argument to the function is unknown,
-//   // it needs to be cast to a List.  Since the return type of get() is unknown,
-//   // cast it to Image.
-//   var previous = ee.Image(ee.List(list).get(-1));
-//   // Add the current anomaly to make a new cumulative anomaly image.
-//   var added = image.add(previous)
-//     // Propagate metadata to the new image.
-//     .set('system:time_start', image.get('system:time_start'));
-//   // Return the list with the cumulative anomaly inserted.
-//   return ee.List(list).add(added);
-// };
+
 //print (cum);
 // Scale the NDVI with fac 0.0001
 var scaleNDVI = function(img){
