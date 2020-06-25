@@ -13,8 +13,6 @@ var mean = reference.mean();
 // collection of 2011-2014 images. Copy the date metadata over to the
 // computed anomaly images in the new collection.
 var series = collection.filterDate('2012-01-01', '2014-12-31')
-//.map(function(image) {return image.subtract(mean).set('system:time_start', image.get('system:time_start'));
-//});
 print (series);
 // Display cumulative anomalies.
 Map.setCenter(84, 27, 5);
@@ -47,22 +45,6 @@ var first = ee.List([
 //   // Return the list with the cumulative anomaly inserted.
 //   return ee.List(list).add(added);
 // };
-
-// Comment
-var tofloat=function(image){
-  return image.toFloat()
-};
-
-//print (accumulate);
-// };
-
-// Create an ImageCollection of cumulative anomaly images by iterating.
-// Since the return type of iterate is unknown, it needs to be cast to a List.
-
-
-// var cumulative = ee.ImageCollection(ee.List(series.iterate(accumulate, first)));
-//var cum= tofloat(cumulative)
-// print (cumulative);
 //print (cum);
 // Scale the NDVI with fac 0.0001
 var scaleNDVI = function(img){
