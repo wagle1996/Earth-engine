@@ -7,7 +7,7 @@ Some Earth Engine codes for landcover change detection. You can run this by inse
 Earth Engine code for unsupervised clustering using Kmeans clustering techniques.
 
 ___
-# Recent publicaiton
+# Recent publication
 
 Wagle, N. et al. Multi-Temporal Land Cover Change Mapping Using Google Earth Engine and Ensemble Learning Methods. Applied Sciences, Volume 10, Issue 22, 2020. https://doi.org/10.3390/app10228083 </br>
 
